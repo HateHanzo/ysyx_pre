@@ -18,7 +18,7 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <main name="main"/>
+  <main name="Decoder_2to4"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -51,42 +51,42 @@
     <tool lib="4" name="D Flip-Flop"/>
     <tool lib="4" name="Register"/>
   </toolbar>
-  <circuit name="main">
+  <circuit name="Decoder_2to4">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="main"/>
+    <a name="circuit" val="Decoder_2to4"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(150,360)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="A0"/>
-    </comp>
-    <comp lib="0" loc="(150,400)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="A1"/>
-    </comp>
-    <comp lib="0" loc="(480,180)" name="Pin">
+    <comp lib="0" loc="(570,110)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
-      <a name="label" val="Y1"/>
+      <a name="label" val="y2"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(480,90)" name="Pin">
+    <comp lib="0" loc="(570,130)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
-      <a name="label" val="Y0"/>
+      <a name="label" val="y1"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(490,280)" name="Pin">
+    <comp lib="0" loc="(570,150)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
-      <a name="label" val="Y2"/>
+      <a name="label" val="y0"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(500,380)" name="Pin">
+    <comp lib="0" loc="(570,90)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
-      <a name="label" val="Y3"/>
+      <a name="label" val="y3"/>
       <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(80,340)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="a1"/>
+    </comp>
+    <comp lib="0" loc="(80,360)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="a0"/>
     </comp>
     <comp lib="1" loc="(240,180)" name="NOT Gate"/>
     <comp lib="1" loc="(240,270)" name="NOT Gate"/>
@@ -94,8 +94,8 @@
     <comp lib="1" loc="(440,280)" name="AND Gate"/>
     <comp lib="1" loc="(440,380)" name="AND Gate"/>
     <comp lib="1" loc="(440,90)" name="AND Gate"/>
-    <wire from="(150,360)" to="(170,360)"/>
-    <wire from="(150,400)" to="(190,400)"/>
+    <wire from="(100,340)" to="(100,400)"/>
+    <wire from="(100,400)" to="(190,400)"/>
     <wire from="(170,180)" to="(170,360)"/>
     <wire from="(170,180)" to="(210,180)"/>
     <wire from="(170,360)" to="(270,360)"/>
@@ -118,9 +118,19 @@
     <wire from="(310,300)" to="(310,400)"/>
     <wire from="(310,300)" to="(390,300)"/>
     <wire from="(310,400)" to="(390,400)"/>
-    <wire from="(440,180)" to="(480,180)"/>
-    <wire from="(440,280)" to="(490,280)"/>
-    <wire from="(440,380)" to="(500,380)"/>
-    <wire from="(440,90)" to="(480,90)"/>
+    <wire from="(440,180)" to="(540,180)"/>
+    <wire from="(440,280)" to="(530,280)"/>
+    <wire from="(440,380)" to="(520,380)"/>
+    <wire from="(440,90)" to="(510,90)"/>
+    <wire from="(510,150)" to="(570,150)"/>
+    <wire from="(510,90)" to="(510,150)"/>
+    <wire from="(520,90)" to="(520,380)"/>
+    <wire from="(520,90)" to="(570,90)"/>
+    <wire from="(530,110)" to="(530,280)"/>
+    <wire from="(530,110)" to="(570,110)"/>
+    <wire from="(540,130)" to="(540,180)"/>
+    <wire from="(540,130)" to="(570,130)"/>
+    <wire from="(80,340)" to="(100,340)"/>
+    <wire from="(80,360)" to="(170,360)"/>
   </circuit>
 </project>
