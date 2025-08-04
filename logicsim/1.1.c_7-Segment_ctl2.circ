@@ -18,7 +18,7 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <main name="main"/>
+  <main name="x_Decoder_2to4"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -51,9 +51,9 @@
     <tool lib="4" name="D Flip-Flop"/>
     <tool lib="4" name="Register"/>
   </toolbar>
-  <circuit name="main">
+  <circuit name="Segment_ctl2">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="main"/>
+    <a name="circuit" val="Segment_ctl2"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(230,530)" name="Pin">
@@ -82,8 +82,8 @@
       <a name="spacing" val="2"/>
     </comp>
     <comp lib="5" loc="(1240,700)" name="7-Segment Display"/>
-    <comp loc="(1120,240)" name="Seg_ctl"/>
-    <comp loc="(400,150)" name="Decoder_4to16"/>
+    <comp loc="(1120,240)" name="Seg_ctl2"/>
+    <comp loc="(400,150)" name="x_Decoder_4to16"/>
     <wire from="(1120,240)" to="(1330,240)"/>
     <wire from="(1120,260)" to="(1300,260)"/>
     <wire from="(1120,280)" to="(1270,280)"/>
@@ -184,9 +184,9 @@
     <wire from="(780,240)" to="(780,580)"/>
     <wire from="(780,240)" to="(900,240)"/>
   </circuit>
-  <circuit name="Decoder_2to4">
+  <circuit name="x_Decoder_2to4">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="Decoder_2to4"/>
+    <a name="circuit" val="x_Decoder_2to4"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(150,360)" name="Pin">
@@ -263,9 +263,9 @@
     <wire from="(440,380)" to="(500,380)"/>
     <wire from="(440,90)" to="(480,90)"/>
   </circuit>
-  <circuit name="Decoder_3to8">
+  <circuit name="x_Decoder_3to8">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="Decoder_3to8"/>
+    <a name="circuit" val="x_Decoder_3to8"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(230,180)" name="Pin">
@@ -337,8 +337,8 @@
     <comp lib="1" loc="(900,600)" name="AND Gate"/>
     <comp lib="1" loc="(900,700)" name="AND Gate"/>
     <comp lib="1" loc="(900,810)" name="AND Gate"/>
-    <comp loc="(610,490)" name="Decoder_2to4"/>
-    <comp loc="(610,80)" name="Decoder_2to4"/>
+    <comp loc="(610,490)" name="x_Decoder_2to4"/>
+    <comp loc="(610,80)" name="x_Decoder_2to4"/>
     <wire from="(230,180)" to="(280,180)"/>
     <wire from="(230,270)" to="(260,270)"/>
     <wire from="(230,80)" to="(310,80)"/>
@@ -401,9 +401,9 @@
     <wire from="(900,700)" to="(940,700)"/>
     <wire from="(900,810)" to="(940,810)"/>
   </circuit>
-  <circuit name="Decoder_4to16">
+  <circuit name="x_Decoder_4to16">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="Decoder_4to16"/>
+    <a name="circuit" val="x_Decoder_4to16"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(1130,490)" name="Splitter">
@@ -513,8 +513,8 @@
     <comp lib="1" loc="(990,740)" name="AND Gate">
       <a name="width" val="8"/>
     </comp>
-    <comp loc="(780,470)" name="Decoder_3to8"/>
-    <comp loc="(780,730)" name="Decoder_3to8"/>
+    <comp loc="(780,470)" name="x_Decoder_3to8"/>
+    <comp loc="(780,730)" name="x_Decoder_3to8"/>
     <wire from="(1020,500)" to="(1020,740)"/>
     <wire from="(1020,500)" to="(1110,500)"/>
     <wire from="(1060,310)" to="(1060,520)"/>
@@ -595,9 +595,9 @@
     <wire from="(990,310)" to="(1060,310)"/>
     <wire from="(990,740)" to="(1020,740)"/>
   </circuit>
-  <circuit name="Seg_ctl">
+  <circuit name="Seg_ctl2">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="Seg_ctl"/>
+    <a name="circuit" val="Seg_ctl2"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(1320,790)" name="Constant">
@@ -709,13 +709,13 @@
       <a name="label" val="segctl_a"/>
       <a name="output" val="true"/>
     </comp>
-    <comp loc="(1360,40)" name="Seg_D"/>
-    <comp loc="(1560,1050)" name="Seg_G"/>
-    <comp loc="(1560,390)" name="Seg_E"/>
-    <comp loc="(1560,710)" name="Seg_F"/>
-    <comp loc="(810,550)" name="Seg_B"/>
-    <comp loc="(810,800)" name="Seg_C"/>
-    <comp loc="(950,250)" name="Seg_A"/>
+    <comp loc="(1360,40)" name="Seg2_D"/>
+    <comp loc="(1560,1050)" name="Seg2_G"/>
+    <comp loc="(1560,390)" name="Seg2_E"/>
+    <comp loc="(1560,710)" name="Seg2_F"/>
+    <comp loc="(810,550)" name="Seg2_B"/>
+    <comp loc="(810,800)" name="Seg2_C"/>
+    <comp loc="(950,250)" name="Seg2_A"/>
     <wire from="(1020,220)" to="(1020,530)"/>
     <wire from="(1020,220)" to="(1140,220)"/>
     <wire from="(1020,530)" to="(1230,530)"/>
@@ -970,9 +970,9 @@
     <wire from="(950,470)" to="(1250,470)"/>
     <wire from="(950,470)" to="(950,520)"/>
   </circuit>
-  <circuit name="Seg_A">
+  <circuit name="Seg2_A">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="Seg_A"/>
+    <a name="circuit" val="Seg2_A"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
@@ -1147,9 +1147,9 @@
     <wire from="(550,60)" to="(550,340)"/>
     <wire from="(550,60)" to="(570,60)"/>
   </circuit>
-  <circuit name="Seg_B">
+  <circuit name="Seg2_B">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="Seg_B"/>
+    <a name="circuit" val="Seg2_B"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(110,120)" name="Pin">
@@ -1277,9 +1277,9 @@
     <wire from="(550,60)" to="(550,340)"/>
     <wire from="(550,60)" to="(570,60)"/>
   </circuit>
-  <circuit name="Seg_C">
+  <circuit name="Seg2_C">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="Seg_C"/>
+    <a name="circuit" val="Seg2_C"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(110,110)" name="Pin">
@@ -1440,9 +1440,9 @@
     <wire from="(550,60)" to="(550,340)"/>
     <wire from="(550,60)" to="(570,60)"/>
   </circuit>
-  <circuit name="Seg_D">
+  <circuit name="Seg2_D">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="Seg_D"/>
+    <a name="circuit" val="Seg2_D"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(110,120)" name="Pin">
@@ -1583,9 +1583,9 @@
     <wire from="(550,60)" to="(550,340)"/>
     <wire from="(550,60)" to="(570,60)"/>
   </circuit>
-  <circuit name="Seg_E">
+  <circuit name="Seg2_E">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="Seg_E"/>
+    <a name="circuit" val="Seg2_E"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(110,120)" name="Pin">
@@ -1690,9 +1690,9 @@
     <wire from="(440,60)" to="(440,240)"/>
     <wire from="(440,60)" to="(460,60)"/>
   </circuit>
-  <circuit name="Seg_F">
+  <circuit name="Seg2_F">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="Seg_F"/>
+    <a name="circuit" val="Seg2_F"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(110,120)" name="Pin">
@@ -1825,9 +1825,9 @@
     <wire from="(550,60)" to="(550,340)"/>
     <wire from="(550,60)" to="(570,60)"/>
   </circuit>
-  <circuit name="Seg_G">
+  <circuit name="Seg2_G">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="Seg_G"/>
+    <a name="circuit" val="Seg2_G"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(110,120)" name="Pin">
@@ -1962,9 +1962,9 @@
     <wire from="(530,60)" to="(530,290)"/>
     <wire from="(530,60)" to="(550,60)"/>
   </circuit>
-  <circuit name="Seg_H">
+  <circuit name="Seg2_H">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="Seg_H"/>
+    <a name="circuit" val="Seg2_H"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
