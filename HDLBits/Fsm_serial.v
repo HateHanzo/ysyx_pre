@@ -1,0 +1,58 @@
+module top_module(
+    input clk,
+    input in,
+    input reset,    // Synchronous reset
+    output done
+); 
+
+ 
+
+    parameter START=3'b000;
+	parameter DATA =3'b001;
+	parameter STOP =3'b010;
+	parameter WAIT =3'b011;
+	parameter DONE =3'b100;
+	
+    reg [2:0] state ; 
+	reg [2:0] next_state ;
+	reg [2:0] cnt_data   ;
+	wire      cnt_ok     ;
+
+	assign cnt_ok = (state==DATA) & (&cnt_data) ;
+    always @(posedge clk ) begin
+        // State flip-flops with asynchronous reset
+        if(reset) 
+            cnt_data <= 3'd0 ;
+		else if(&cnt_data)
+			cnt_data <= #1 3'd0 ;
+        else if(state==DATA)
+            cnt_data <= #1 cnt_data + 3'd1 ;
+		else
+			cnt_data <= #1 3'd0 ;
+    end
+
+    always @(*) begin
+        // State transition logic
+        case(state)
+            START : next_state = ~in    ? DATA  : START ;
+            DATA  : next_state = cnt_ok ? STOP  : DATA  ;
+			STOP  : next_state = in     ? DONE  : WAIT  ;
+			WAIT  : next_state = in     ? START : WAIT  ;
+			DONE  : next_state = in     ? START : DATA  ;
+			default : next_state = START ;
+        endcase
+    end
+
+    always @(posedge clk ) begin
+        // State flip-flops with asynchronous reset
+        if(reset) 
+            state <= 3'b000 ;
+        else
+            state <= #1 next_state ;
+    end
+
+    // Output logic
+    assign done  = state==DONE  ;
+    
+
+endmodule
