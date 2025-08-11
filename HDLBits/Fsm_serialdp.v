@@ -20,6 +20,10 @@ module top_module(
 	reg [2:0] cnt_data   ;
 	wire      cnt_ok     ;
 	reg       odd        ;
+	reg       par_err    ;
+	wire      ctl_clr    ;
+
+	assign ctl_clr = (state==START) | (state==DONE) ;
 
 	assign cnt_ok = (state==DATA) & (&cnt_data) ;
     always @(posedge clk ) begin
@@ -38,7 +42,7 @@ module top_module(
         // State flip-flops with asynchronous reset
         if(reset) 
             out_byte <= 8'd0 ;
-		else if((state==START) || (state==DONE))
+		else if(ctl_clr)
             out_byte <= #1 8'd0 ;
         else if(state==DATA)
             out_byte <= #1 {in,out_byte[7:1]} ;
@@ -47,8 +51,19 @@ module top_module(
     always @(posedge clk ) begin
         // State flip-flops with asynchronous reset
         if(reset) 
+            par_err <= 1'd0 ;
+		else if(ctl_clr)
+            par_err <= #1 1'd0 ;
+        else if((state==PCHK) && (odd==in))
+            par_err <= #1 1'b1 ;
+    end
+
+
+    always @(posedge clk ) begin
+        // State flip-flops with asynchronous reset
+        if(reset) 
             odd <= 1'd0 ;
-		else if((state==START) || (state==DONE))
+		else if(ctl_clr)
             odd <= #1 1'd0 ;
         else if((state==DATA) && in)
             odd <= #1 ~odd ;
@@ -76,7 +91,7 @@ module top_module(
     end
 
     // Output logic
-    assign done  = (state==DONE) & odd  ;
+    assign done  = (state==DONE) & ~par_err ;
     
 
 endmodule
