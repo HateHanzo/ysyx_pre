@@ -80,6 +80,12 @@
     <a name="circuit" val="d_latch"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(1090,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Q"/>
+      <a name="output" val="true"/>
+    </comp>
     <comp lib="0" loc="(310,230)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="D"/>
@@ -92,12 +98,6 @@
       <a name="appearance" val="NewPins"/>
       <a name="label" val="rstn"/>
     </comp>
-    <comp lib="0" loc="(900,240)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="Q"/>
-      <a name="output" val="true"/>
-    </comp>
     <comp lib="1" loc="(380,310)" name="NOT Gate"/>
     <comp lib="1" loc="(480,240)" name="AND Gate">
       <a name="size" val="30"/>
@@ -105,13 +105,18 @@
     <comp lib="1" loc="(480,300)" name="AND Gate">
       <a name="size" val="30"/>
     </comp>
-    <comp lib="1" loc="(850,240)" name="AND Gate">
+    <comp lib="1" loc="(710,190)" name="NOT Gate"/>
+    <comp lib="1" loc="(790,200)" name="OR Gate">
       <a name="size" val="30"/>
     </comp>
-    <comp loc="(770,250)" name="sr_latch"/>
+    <comp lib="1" loc="(800,270)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <comp loc="(1040,250)" name="sr_latch"/>
+    <wire from="(1040,250)" to="(1090,250)"/>
     <wire from="(310,230)" to="(340,230)"/>
     <wire from="(310,270)" to="(420,270)"/>
-    <wire from="(310,330)" to="(790,330)"/>
+    <wire from="(310,330)" to="(600,330)"/>
     <wire from="(340,230)" to="(340,310)"/>
     <wire from="(340,230)" to="(450,230)"/>
     <wire from="(340,310)" to="(350,310)"/>
@@ -123,13 +128,23 @@
     <wire from="(480,240)" to="(490,240)"/>
     <wire from="(480,300)" to="(500,300)"/>
     <wire from="(490,240)" to="(490,270)"/>
-    <wire from="(490,270)" to="(550,270)"/>
+    <wire from="(490,270)" to="(740,270)"/>
     <wire from="(500,250)" to="(500,300)"/>
-    <wire from="(500,250)" to="(550,250)"/>
-    <wire from="(770,250)" to="(820,250)"/>
-    <wire from="(790,230)" to="(790,330)"/>
-    <wire from="(790,230)" to="(820,230)"/>
-    <wire from="(850,240)" to="(900,240)"/>
+    <wire from="(500,250)" to="(720,250)"/>
+    <wire from="(600,190)" to="(600,330)"/>
+    <wire from="(600,190)" to="(680,190)"/>
+    <wire from="(600,330)" to="(740,330)"/>
+    <wire from="(710,190)" to="(760,190)"/>
+    <wire from="(720,210)" to="(720,250)"/>
+    <wire from="(720,210)" to="(760,210)"/>
+    <wire from="(740,260)" to="(740,270)"/>
+    <wire from="(740,260)" to="(770,260)"/>
+    <wire from="(740,280)" to="(740,330)"/>
+    <wire from="(740,280)" to="(770,280)"/>
+    <wire from="(790,200)" to="(800,200)"/>
+    <wire from="(800,200)" to="(800,250)"/>
+    <wire from="(800,250)" to="(820,250)"/>
+    <wire from="(800,270)" to="(820,270)"/>
   </circuit>
   <circuit name="sr_latch">
     <a name="appearance" val="logisim_evolution"/>
