@@ -53,7 +53,7 @@
     <tool lib="4" name="Register"/>
   </toolbar>
   <circuit name="x_full_adder_4bit_mux">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="evolution"/>
     <a name="circuit" val="x_full_adder_4bit_mux"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
@@ -97,31 +97,31 @@
       <a name="appearance" val="NewPins"/>
       <a name="label" val="sel_b"/>
     </comp>
-    <comp lib="0" loc="(920,140)" name="Pin">
+    <comp lib="0" loc="(950,120)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="s3"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(920,160)" name="Pin">
+    <comp lib="0" loc="(950,140)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="s2"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(920,180)" name="Pin">
+    <comp lib="0" loc="(950,160)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="s1"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(920,200)" name="Pin">
+    <comp lib="0" loc="(950,180)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="s0"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(920,220)" name="Pin">
+    <comp lib="0" loc="(950,200)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="cout"/>
@@ -151,7 +151,7 @@
     <comp lib="2" loc="(490,570)" name="Multiplexer">
       <a name="size" val="20"/>
     </comp>
-    <comp loc="(920,140)" name="x_full_adder_4bit"/>
+    <comp loc="(880,140)" name="x_full_adder_4bit"/>
     <wire from="(350,100)" to="(450,100)"/>
     <wire from="(350,160)" to="(440,160)"/>
     <wire from="(350,220)" to="(430,220)"/>
@@ -203,21 +203,21 @@
     <wire from="(490,510)" to="(540,510)"/>
     <wire from="(490,570)" to="(550,570)"/>
     <wire from="(500,110)" to="(500,140)"/>
-    <wire from="(500,140)" to="(700,140)"/>
+    <wire from="(500,140)" to="(780,140)"/>
     <wire from="(500,160)" to="(500,170)"/>
     <wire from="(500,160)" to="(700,160)"/>
     <wire from="(500,180)" to="(500,230)"/>
-    <wire from="(500,180)" to="(700,180)"/>
+    <wire from="(500,180)" to="(710,180)"/>
     <wire from="(510,200)" to="(510,290)"/>
-    <wire from="(510,200)" to="(700,200)"/>
+    <wire from="(510,200)" to="(720,200)"/>
     <wire from="(520,220)" to="(520,390)"/>
-    <wire from="(520,220)" to="(700,220)"/>
+    <wire from="(520,220)" to="(730,220)"/>
     <wire from="(530,240)" to="(530,450)"/>
-    <wire from="(530,240)" to="(700,240)"/>
+    <wire from="(530,240)" to="(740,240)"/>
     <wire from="(540,260)" to="(540,510)"/>
-    <wire from="(540,260)" to="(700,260)"/>
+    <wire from="(540,260)" to="(750,260)"/>
     <wire from="(550,280)" to="(550,570)"/>
-    <wire from="(550,280)" to="(700,280)"/>
+    <wire from="(550,280)" to="(760,280)"/>
     <wire from="(610,130)" to="(610,190)"/>
     <wire from="(610,190)" to="(610,250)"/>
     <wire from="(610,250)" to="(610,310)"/>
@@ -227,10 +227,39 @@
     <wire from="(610,530)" to="(610,590)"/>
     <wire from="(610,590)" to="(610,680)"/>
     <wire from="(630,300)" to="(630,630)"/>
-    <wire from="(630,300)" to="(700,300)"/>
+    <wire from="(630,300)" to="(770,300)"/>
+    <wire from="(700,150)" to="(700,160)"/>
+    <wire from="(700,150)" to="(780,150)"/>
+    <wire from="(710,160)" to="(710,180)"/>
+    <wire from="(710,160)" to="(780,160)"/>
+    <wire from="(720,170)" to="(720,200)"/>
+    <wire from="(720,170)" to="(780,170)"/>
+    <wire from="(730,180)" to="(730,220)"/>
+    <wire from="(730,180)" to="(780,180)"/>
+    <wire from="(740,190)" to="(740,240)"/>
+    <wire from="(740,190)" to="(780,190)"/>
+    <wire from="(750,200)" to="(750,260)"/>
+    <wire from="(750,200)" to="(780,200)"/>
+    <wire from="(760,210)" to="(760,280)"/>
+    <wire from="(760,210)" to="(780,210)"/>
+    <wire from="(770,220)" to="(770,300)"/>
+    <wire from="(770,220)" to="(780,220)"/>
+    <wire from="(880,140)" to="(910,140)"/>
+    <wire from="(880,150)" to="(920,150)"/>
+    <wire from="(880,160)" to="(950,160)"/>
+    <wire from="(880,170)" to="(940,170)"/>
+    <wire from="(880,180)" to="(930,180)"/>
+    <wire from="(910,120)" to="(910,140)"/>
+    <wire from="(910,120)" to="(950,120)"/>
+    <wire from="(920,140)" to="(920,150)"/>
+    <wire from="(920,140)" to="(950,140)"/>
+    <wire from="(930,180)" to="(930,200)"/>
+    <wire from="(930,200)" to="(950,200)"/>
+    <wire from="(940,170)" to="(940,180)"/>
+    <wire from="(940,180)" to="(950,180)"/>
   </circuit>
   <circuit name="x_full_adder_4bit">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="evolution"/>
     <a name="circuit" val="x_full_adder_4bit"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>

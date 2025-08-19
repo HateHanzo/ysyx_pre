@@ -52,7 +52,7 @@
     <tool lib="4" name="Register"/>
   </toolbar>
   <circuit name="SegCtl_0tof">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="evolution"/>
     <a name="circuit" val="SegCtl_0tof"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
